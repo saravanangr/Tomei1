@@ -114,7 +114,7 @@ function send_email($key) {
         );
         $ch = curl_init();
         curl_setopt ($ch, CURLOPT_URL, 'https://api.mailgun.net/v3/mg.naacos.com/messages');
-        curl_setopt ($ch, CURLOPT_USERPWD, $key);
+        curl_setopt ($ch, CURLOPT_USERPWD, 'api:key-9b88fcfd0a221fe21da10a1bd6efaade');
         curl_setopt ($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: multipart/form-data'));
         curl_setopt ($ch, CURLOPT_POSTFIELDS, $content );
